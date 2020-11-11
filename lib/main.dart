@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  final questions = const [
+  final questions = [
     {
       'questionText': 'What\'s your favourite color?',
       'answers': ['Red', 'Green', 'Yellow', 'Blue']
@@ -61,13 +61,6 @@ class MyAppState extends State<MyApp> {
                       }).toList()
                     ],
                   )
-                : Result(
-                    resetApp,
-                    'Restart quiz',
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple),
-                  )));
+                : Result(resetApp)));
   }
 }
